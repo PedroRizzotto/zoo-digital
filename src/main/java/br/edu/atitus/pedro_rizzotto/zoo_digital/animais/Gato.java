@@ -2,9 +2,10 @@ package br.edu.atitus.pedro_rizzotto.zoo_digital.animais;
 
 import br.edu.atitus.pedro_rizzotto.zoo_digital.comportamentos.Corrida;
 import br.edu.atitus.pedro_rizzotto.zoo_digital.comportamentos.Nado;
+import br.edu.atitus.pedro_rizzotto.zoo_digital.comportamentos.Predacao;
 import br.edu.atitus.pedro_rizzotto.zoo_digital.especies.Mamifero;
 
-public final class Gato extends Mamifero implements Corrida, Nado {
+public final class Gato extends Mamifero implements Corrida, Nado, Predacao {
     public Gato(String nome, Integer idade) {
         super(nome, idade, true);
     }
@@ -28,4 +29,10 @@ public final class Gato extends Mamifero implements Corrida, Nado {
     public void correr() {
         IO.println(this.getNome() + " está correndo pelo telhado!");
     }
+
+    @Override
+    public void cacar() {
+        IO.println(this.getNome() + " está caçando o rato!");
+    }
+
 }

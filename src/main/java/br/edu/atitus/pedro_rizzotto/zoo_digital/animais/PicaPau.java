@@ -1,10 +1,11 @@
 package br.edu.atitus.pedro_rizzotto.zoo_digital.animais;
 
 import br.edu.atitus.pedro_rizzotto.zoo_digital.comportamentos.Corrida;
+import br.edu.atitus.pedro_rizzotto.zoo_digital.comportamentos.Predacao;
 import br.edu.atitus.pedro_rizzotto.zoo_digital.comportamentos.Voo;
 import br.edu.atitus.pedro_rizzotto.zoo_digital.especies.Ave;
 
-public class PicaPau extends Ave implements Corrida, Voo {
+public class PicaPau extends Ave implements Corrida, Voo, Predacao {
 
     public PicaPau(String nome, Integer idade, String corPenas) {
         super(nome, idade, corPenas);
@@ -30,6 +31,11 @@ public class PicaPau extends Ave implements Corrida, Voo {
     @Override
     public void correr() {
         IO.println(this.getNome() + " está se movimentando pelo chão de forma desajeitada!");
+    }
+
+    @Override
+    public void cacar() {
+        IO.println(this.getNome() + " está caçando larvas no tronco da árvore");
     }
 
 }

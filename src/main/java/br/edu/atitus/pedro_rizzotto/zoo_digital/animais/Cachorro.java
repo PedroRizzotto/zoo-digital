@@ -2,13 +2,12 @@ package br.edu.atitus.pedro_rizzotto.zoo_digital.animais;
 
 import br.edu.atitus.pedro_rizzotto.zoo_digital.comportamentos.Corrida;
 import br.edu.atitus.pedro_rizzotto.zoo_digital.comportamentos.Nado;
+import br.edu.atitus.pedro_rizzotto.zoo_digital.comportamentos.Predacao;
 import br.edu.atitus.pedro_rizzotto.zoo_digital.especies.Mamifero;
 
-public final class Cachorro extends Mamifero implements Corrida, Nado {
+public final class Cachorro extends Mamifero implements Corrida, Nado, Predacao {
     public Cachorro(String nome, Integer idade) {
         super(nome, idade, true);
-        
-        
     }
 
     @Override
@@ -29,6 +28,11 @@ public final class Cachorro extends Mamifero implements Corrida, Nado {
     @Override
     public void correr() {
         IO.println(this.getNome() + " está correndo por todo o pátio!");
+    }
+
+    @Override
+    public void cacar() {
+        IO.println(this.getNome() + " está caçando o gato!");
     }
     
 }
