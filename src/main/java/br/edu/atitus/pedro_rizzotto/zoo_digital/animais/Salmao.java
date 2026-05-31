@@ -3,15 +3,15 @@ package br.edu.atitus.pedro_rizzotto.zoo_digital.animais;
 import br.edu.atitus.pedro_rizzotto.zoo_digital.especies.Peixe;
 import br.edu.atitus.pedro_rizzotto.zoo_digital.comportamentos.Nado;
 
-public class Traira extends Peixe implements Nado{
+public class Salmao extends Peixe implements Nado {
 
-    public Traira(String nome, int idade) {
-        super(nome, idade, "Doce");
+    public Salmao(String nome, int idade) {
+        super(nome, idade, "Doce e Salgada");
     }
 
     @Override
     public void comer() {
-        this.comer("lambaris");
+        this.comer("pequenos crustáceos");
     }
 
     @Override
@@ -21,7 +21,6 @@ public class Traira extends Peixe implements Nado{
 
     @Override
     public void nadar() {
-        IO.println(getNome() + " está nadando no rio");
+        IO.println(getNome() + " está nadando contra a correnteza");
     }
-
 }
